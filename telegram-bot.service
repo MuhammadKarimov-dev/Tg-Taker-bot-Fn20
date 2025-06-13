@@ -1,0 +1,14 @@
+[Unit]
+Description=Telegram Bot Service
+After=network.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/var/www/bots/Tg-Taker-bot-Fn20
+ExecStart=/var/www/bots/Tg-Taker-bot-Fn20/run_bot.sh
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target 
